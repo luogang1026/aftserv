@@ -42,7 +42,7 @@ export default {
           const data = JSON.parse(response.data);
           console.log(data);
           if (data.errno === 0) {
-            tableData = that.data.list;
+            this.tableData = that.data.list;
             sessionStorage.setItem("tableData", that.data.list);
           } else {
             that.error = data.errmsg;
