@@ -44,7 +44,6 @@ export default {
           if (data.errno === 0) {
             tableData = that.data.list;
             sessionStorage.setItem("tableData", that.data.list);
-            that.$router.push({ path: "/main/user" });
           } else {
             that.error = data.errmsg;
           }
