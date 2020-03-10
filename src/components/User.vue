@@ -33,7 +33,7 @@ export default {
     userList() {
       const that = this;
       that.$axios
-        .post("/api/user/coupon/accountlist", {
+        .post("/api/coupon/accountlist", {
           pageSize: 10,
           curPage: 1
         }, {
