@@ -28,7 +28,7 @@ export default {
     };
   },
   mounted:function() {
-    this.userList();
+    this.userList()
   },
   methods: {
     userList() {
