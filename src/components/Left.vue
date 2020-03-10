@@ -3,10 +3,10 @@
       <div class="user-info">
           <div class="user-info-bc"></div>
           <i class="el-icon-s-custom"></i>
-          <div>admin/管理员</div>
+          <div>{{username}}/管理员</div>
       </div>
-      <div class="manage" :class="{'color-4c4a55':menu=='user'}" @click="selectManage()"><i class="el-icon-user-solid"></i><span>用户管理</span></div>
-      <div class="manage"><i class="el-icon-s-cooperation"></i><span>商品管理</span></div>
+      <div class="manage" :class="{'color-4c4a55':menu=='user'}" @click="selectManage(1)"><i class="el-icon-user-solid"></i><span class="manage-span">用户管理</span></div>
+      <div class="manage" :class="{'color-4c4a55':menu=='prod'}" @click="selectManage(2)"><i class="el-icon-s-cooperation"></i><span class="manage-span">商品管理</span></div>
   </div>
 </template>
 
@@ -14,14 +14,25 @@
 export default {
     data(){
         return {
-            menu:"user"
+            menu:"user",
+            username:""
         }
     },
     methods:{
-        selectManage(){
+        selectManage(id){
             // const self = this;
-            this.$router.push("/user");
+            if(id==1){
+                this.menu = "user";
+                this.$router.push("/main/user");
+            }else{
+                this.menu = "prod";
+                this.$router.push("/main/prod");
+            }
+            
         }
+    },
+    created(){
+        this.username = sessionStorage.getItem("username");
     }
 
 }
@@ -47,7 +58,7 @@ export default {
 .color-4c4a55{
     background-color: #4c4a55;
 }
-span{
+.manage-span{
     margin-left:10px;
 }
 .user-info{

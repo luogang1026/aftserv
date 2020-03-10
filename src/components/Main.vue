@@ -16,6 +16,11 @@
 import Header from "./Header.vue"
 import Left from "./Left.vue"
 export default {
+    data(){
+        return{
+
+        }
+    },
     components:{
         Header,
         Left

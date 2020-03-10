@@ -1,6 +1,6 @@
 <template>
-  <div class="user">
-    <div class="user-title">用户管理</div>
+  <div class="prod">
+    <div class="prod-title">商品管理</div>
     <div>
       <el-table :data="tableData" style="width: 100%">
         <el-table-column prop="date" label="日期" width="180"></el-table-column>
@@ -49,10 +49,10 @@ export default {
 </script>
 
 <style>
-.user {
+.prod {
   padding: 30px;
 }
-.user-title {
+.prod-title {
   height: 34px;
   line-height: 34px;
 }

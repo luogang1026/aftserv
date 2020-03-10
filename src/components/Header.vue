@@ -12,10 +12,14 @@
 
 <script>
 export default {
-  data() {},
+  data() {
+    return{
+      
+    }
+  },
   methods: {
       logout(){
-          this.$router.push({path:"/"})
+          this.$router.push({path:"/login"})
       }
   }
 };

@@ -1,16 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Element from 'element-ui'
+import Axios from 'axios'
 import App from './App.vue'
 import Login from './components/Login.vue'
 import Main from './components/Main.vue'
 import User from './components/User.vue'
+import Prod from './components/Prod.vue'
 import 'element-ui/lib/theme-chalk/index.css';
 
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(Element)
+Vue.prototype.$axios = Axios
 
 const routes = [
   { path: '/', redirect: '/login' },
@@ -20,9 +23,11 @@ const routes = [
       {
         path:"user",
         component:User
+      },{
+        path:"prod",
+        component:Prod
       }
     ]
-
   }
 ]
 
