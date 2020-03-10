@@ -36,16 +36,13 @@ export default {
         .post("/api/coupon/accountlist", {
           pageSize: 10,
           curPage: 1
-        }, {
-          headers: {
-            Authorization: "Bearer " + this.$cookies.get("token")
-          }
         })
         .then(function(response) {
           console.log(response);
           const data = JSON.parse(response.data);
           console.log(data);
           if (data.errno === 0) {
+            tableData = that.data.list;
             sessionStorage.setItem("tableData", that.data.list);
             that.$router.push({ path: "/main/user" });
           } else {
