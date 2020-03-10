@@ -36,6 +36,10 @@ export default {
         .post("/api/user/coupon/accountlist", {
           pageSize: 10,
           curPage: 1
+        }, {
+          headers: {
+            Authorization: "Bearer " + this.$cookies.get("token")
+          }
         })
         .then(function(response) {
           console.log(response);
