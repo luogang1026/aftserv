@@ -23,7 +23,7 @@
 export default {
   data() {
     return {
-      tableData: []
+      tableData: [],
     };
   },
   mounted () {
@@ -40,10 +40,11 @@ export default {
         .then(function(response) {
           console.log(response);
           const data = JSON.parse(response.data);
-          console.log(data);
           if (data.errno === 0) {
             this.tableData = data.data.list;
             sessionStorage.setItem("tableData", data.data.list);
+            this.reload();
+            console.log(data);
           } else {
             that.error = data.errmsg;
           }
