@@ -43,7 +43,7 @@ export default {
           console.log(data);
           if (data.errno === 0) {
             this.tableData = that.data.list;
-            sessionStorage.setItem("tableData", that.data.list);
+            sessionStorage.setItem("tableData", data.data.list);
           } else {
             that.error = data.errmsg;
           }
