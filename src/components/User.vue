@@ -23,11 +23,10 @@
 export default {
   data() {
     return {
-      tableData: [
-      ]
+      tableData: []
     };
   },
-  mounted:function() {
+  mounted () {
     this.userList()
   },
   methods: {
