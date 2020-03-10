@@ -33,16 +33,6 @@ export default {
   methods: {
     userList() {
       const that = this;
-      //   that.$router.push({path:"/main/user"});
-      if (!that.username) {
-        that.error = "请输入用户名";
-        return;
-      }
-      if (!that.password) {
-        that.error = "请输入密码";
-        return;
-      }
-
       that.$axios
         .post("/api/user/coupon/accountlist", {
           pageSize: 10,
