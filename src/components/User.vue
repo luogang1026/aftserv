@@ -41,9 +41,9 @@ export default {
           console.log(response);
           const data = JSON.parse(response.data);
           if (data.errno === 0) {
-            this.tableData = data.data.list;
+            that.tableData = data.data.list;
             sessionStorage.setItem("tableData", data.data.list);
-            this.reload();
+            that.reload();
             console.log(data);
           } else {
             that.error = data.errmsg;
