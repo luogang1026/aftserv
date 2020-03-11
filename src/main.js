@@ -7,6 +7,7 @@ import Login from './components/Login.vue'
 import Main from './components/Main.vue'
 import User from './components/User.vue'
 import Prod from './components/Prod.vue'
+import Appeal from './components/Appeal.vue'
 import 'element-ui/lib/theme-chalk/index.css';
 
 
@@ -26,6 +27,9 @@ const routes = [
       },{
         path:"prod",
         component:Prod
+      },{
+        path:"appeal",
+        component:Appeal
       }
     ]
   }

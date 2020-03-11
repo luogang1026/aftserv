@@ -7,6 +7,7 @@
       </div>
       <div class="manage" :class="{'color-4c4a55':menu=='user'}" @click="selectManage(1)"><i class="el-icon-user-solid"></i><span class="manage-span">用户管理</span></div>
       <div class="manage" :class="{'color-4c4a55':menu=='prod'}" @click="selectManage(2)"><i class="el-icon-s-cooperation"></i><span class="manage-span">商品管理</span></div>
+      <div class="manage" :class="{'color-4c4a55':menu=='prod'}" @click="selectManage(3)"><i class="el-icon-s-cooperation"></i><span class="manage-span">申诉管理</span></div>
   </div>
 </template>
 
@@ -24,9 +25,12 @@ export default {
             if(id==1){
                 this.menu = "user";
                 this.$router.push("/main/user");
-            }else{
+            }else if (id == 2){
                 this.menu = "prod";
                 this.$router.push("/main/prod");
+            } else if (id==3) {
+                this.menu = "appeal";
+                this.$router.push("/main/appeal");
             }
             
         }
