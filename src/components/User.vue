@@ -3,10 +3,14 @@
     <div class="user-title">用户管理</div>
     <div>
       <el-table :data="tableData" style="width: 100%">
-        <el-table-column prop="phone_num" label="账户" width="180"></el-table-column>
-        <el-table-column prop="alipayName" label="推荐人" width="180"></el-table-column>
-        <el-table-column prop="password" label="当前单量" width="180"></el-table-column>
-        <el-table-column prop="password" label="总收益" width="180"></el-table-column>
+        <el-table-column prop="phone_num" label="账户" width="120"></el-table-column>
+        <el-table-column prop="material" label="当前单量" width="120"></el-table-column>
+        <el-table-column prop="recommendProfit" label="推荐收益" width="120"></el-table-column>
+        <el-table-column prop="splitReward" label="拆分收益" width="120"></el-table-column>
+        <el-table-column prop="totalReward" label="总收益" width="120"></el-table-column>
+        <el-table-column prop="totalCapital" label="总资产" width="120"></el-table-column>
+        <el-table-column prop="recommender" label="推荐人" width="120"></el-table-column>
+        <el-table-column prop="level" label="等级" width="120"></el-table-column>
         <el-table-column prop="status" label="账号状态"></el-table-column>
         <el-table-column label="操作">
           <template slot-scope="scope">
@@ -33,8 +37,8 @@ export default {
     userList() {
       const that = this;
       that.$axios
-        .post("/api/coupon/accountlist", {
-          pageSize: 10,
+        .post("/api/coupon/userlist", {
+          pageSize: 20,
           curPage: 1
         })
         .then(function(response) {
