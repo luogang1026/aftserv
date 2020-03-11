@@ -3,7 +3,7 @@
     <div class="user-title">用户管理</div>
     <div>
       <el-table :data="tableData" style="width: 100%">
-        <el-table-column prop="phone_num" label="账户" width="120"></el-table-column>
+        <el-table-column prop="phoneNum" label="账户" width="120"></el-table-column>
         <el-table-column prop="material" label="当前单量" width="120"></el-table-column>
         <el-table-column prop="recommendProfit" label="推荐收益" width="120"></el-table-column>
         <el-table-column prop="splitReward" label="拆分收益" width="120"></el-table-column>
