@@ -1,6 +1,6 @@
 <template>
-  <div class="user">
-    <div class="user-title">用户管理</div>
+  <div class="appeal">
+    <div class="appeal-title">申诉管理</div>
     <div>
       <el-table :data="tableData" style="width: 100%">
         <el-table-column prop="phoneNum" label="账户" width="120"></el-table-column>
@@ -62,10 +62,10 @@ export default {
 </script>
 
 <style>
-.user {
+.appeal {
   padding: 30px;
 }
-.user-title {
+.appeal-title {
   height: 34px;
   line-height: 34px;
 }

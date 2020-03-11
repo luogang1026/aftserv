@@ -44,7 +44,7 @@ export default {
       }
 
       that.$axios
-        .post("/api/coupon/login", {
+        .post("/api/coupon/adminlogin", {
           phonenum: that.username,
           password: that.password
         })
