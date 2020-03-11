@@ -62,10 +62,10 @@ export default {
 </script>
 
 <style>
-.user {
+.appeal {
   padding: 30px;
 }
-.user-title {
+.appeal-title {
   height: 34px;
   line-height: 34px;
 }
